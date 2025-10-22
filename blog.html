@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Lovable No Code Training Blog - Learn no code development with expert teachers through module learning, live calls, and employment opportunities.">
+    <meta name="keywords" content="no code training, online learning, non-technical developers, employment opportunities, blog">
+    <meta name="author" content="Lovable">
+    <meta property="og:title" content="Lovable No Code Training Blog">
+    <meta property="og:description" content="No Code Training For Non Tech Devs - Blog">
+    <meta property="og:type" content="website">
+    <title>Lovable No Code Training Blog - No Code Development Tips & Guides</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+        
+        * {
+            font-family: 'Inter', sans-serif;
+        }
+        
+        .gradient-text {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .hero-gradient {
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+        }
+        
+        .cta-gradient {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        
+        .card-hover {
+            transition: all 0.3s ease-in-out;
+        }
+        
+        .card-hover:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+        }
+        
+        .feature-icon {
+            width: 64px;
+            height: 64px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 12px;
+            color: white;
+            font-size: 32px;
+        }
+        
+        .accordion-item {
+            border-bottom: 1px solid #e5e7eb;
+        }
+        
+        .accordion-button {
+            transition: all 0.3s ease-in-out;
+        }
+        
+        .accordion-button:hover {
+            background-color: #f9fafb;
+        }
+        
+        .accordion-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-in-out;
+        }
+        
+        .accordion-content.active {
+            max-height: 500px;
+        }
+        
+        .sticky-header {
+            position: sticky;
+            top: 0;
+            z-index: 50;
+            background: white;
+            box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
+        }
+        
+        .mobile-menu {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-in-out;
+        }
+        
+        .mobile-menu.active {
+            max-height: 400px;
+        }
+        
+        .btn-primary {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            transition: all 0.3s ease-in-out;
+        }
+        
+        .btn-primary:hover {
+            transform: scale(1.05);
+            box-shadow: 0 20px 25px -5px rgba(102, 126, 234, 0.4);
+        }
+        
+        .btn-secondary {
+            border: 2px solid #667eea;
+            color: #667eea;
+            transition: all 0.3s ease-in-out;
+        }
+        
+        .btn-secondary:hover {
+            background-color: #667eea;
+            color: white;
+            transform: scale(1.05);
+        }
+
+        .blog-card {
+            background: white;
+            border: 1px solid #e5e7eb;
+            border-radius: 1rem;
+            overflow: hidden;
+            transition: all 0.3s ease-in-out;
+        }
+
+        .blog-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+            border-color: #d1d5db;
+        }
+
+        .blog-date {
+            display: inline-block;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            font-size: 0.875rem;
+            font-weight: 600;
+        }
+
+        .featured-blog {
+            background: white;
+            border: 2px solid #e5e7eb;
+            border-radius: 1.5rem;
+            padding: 2rem;
+            margin-bottom: 3rem;
+            transition: all 0.3s ease-in-out;
+        }
+
+        .featured-blog:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.15);
+            border-color: #d1d5db;
+        }
+    </style>
+</head>
+<body class="bg-white text-gray-900">
+    <!-- Header -->
+    <header class="sticky-header">
+        <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
+            <div class="flex items-center">
+                <a href="https://test-acc-12349.github.io/lovable-no-code-training-2025-10-22-j1p02" class="text-2xl font-bold gradient-text hover:opacity-80 transition duration-300">Lovable</a>
+            </div>
+            
+            <!-- Desktop Menu -->
+            <div class="hidden md:flex gap-8 items-center">
+                <a href="https://test-acc-12349.github.io/lovable-no-code-training-2025-10-22-j1p02" class="text-gray-700 hover:text-gray-900 transition duration-300">← Back</a>
+            </div>
+            
+            <!-- Mobile Menu Button -->
+            <button class="md:hidden flex flex-col gap-1 focus:outline-none" id="mobile-menu-btn" aria-label="Toggle mobile menu">
+                <span class="w-6 h-0.5 bg-gray-900 transition duration-300"></span>
+                <span class="w-6 h-0.5 bg-gray-900 transition duration-300"></span>
+                <span class="w-6 h-0.5 bg-gray-900 transition duration-300"></span>
+            </button>
+        </nav>
+        
+        <!-- Mobile Menu -->
+        <div class="mobile-menu md:hidden" id="mobile-menu">
+            <div class="px-4 sm:px-6 lg:px-8 py-4 flex flex-col gap-4">
+                <a href="https://test-acc-12349.github.io/lovable-no-code-training-2025-10-22-j1p02" class="text-gray-700 hover:text-gray-900 transition duration-300">← Back</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-gradient py-16 md:py-24 lg:py-32 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-7xl mx-auto text-center">
+            <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-gray-900 leading-tight tracking-tight mb-6">
+                Our Blog
+            </h1>
+            <p class="text-lg sm:text-xl md:text-2xl text-gray-700 font-light leading-relaxed mb-4">
+                Insights, Tips & Strategies for No-Code Success
+            </p>
+            <p class="text-base sm:text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed">
+                Stay updated with the latest trends in no-code development, learn best practices from industry experts, and discover strategies to accelerate your career in the rapidly growing no-code ecosystem.
+            </p>
+        </div>
+    </section>
+
+    <!-- Blog Listing Section -->
+    <section class="py-16 md:py-24 lg:py-32 px-4 sm:px-6 lg:px-8 bg-white">
+        <div class="max-w-7xl mx-auto">
+            <!-- Featured Blog Post -->
+            <div class="featured-blog mb-12">
+                <div class="mb-4">
+                    <span class="blog-date">October 22, 2025</span>
+                </div>
+                <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-6 leading-tight">
+                    Getting Started with Our Platform
+                </h2>
+                <p class="text-lg text-gray-600 leading-relaxed mb-8">
+                    No-code development is revolutionizing software creation by enabling non-technical professionals to build sophisticated applications without programming knowledge. Using visual, drag-and-drop platforms like Bubble, FlutterFlow, and Zapier, developers can create fully functional applications in weeks instead of months. This shift democratizes tech careers, offering exceptional opportunities for career changers and entrepreneurs. Success requires mastering problem-solving, specific platforms, design principles, and database management. The booming market demand significantly outpaces available talent, creating lucrative freelance and employment opportunities. With accessible learning curves and strong income potential, now is the ideal time to enter this transformative field and build your no-code expertise.
+                </p>
+                <a href="https://test-acc-12349.github.io/lovable-no-code-training-2025-10-22-j1p02/blog/getting-started-with-our-platform.html" class="btn-primary text-white px-6 py-3 rounded-lg font-semibold inline-block hover:shadow-lg transition duration-300">
+                    Read More →
+                </a>
+            </div>
+
+            <!-- Blog Grid Section -->
+            <div class="mt-16">
+                <h3 class="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-12 leading-tight">
+                    More Articles Coming Soon
+                </h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Placeholder Blog Cards -->
+                    <div class="blog-card p-6 md:p-8">
+                        <div class="h-48 bg-gradient-to-br from-purple-100 to-indigo-100 rounded-lg mb-6 flex items-center justify-center">
+                            <span class="text-gray-400 text-4xl">📝</span>
+                        </div>
+                        <div class="mb-4">
+                            <span class="text-sm text-gray-500">Coming Soon</span>
+                        </div>
+                        <h4 class="text-xl font-bold text-gray-900 mb-3">
+                            No-Code Platform Comparison
+                        </h4>
+                        <p class="text-gray-600 leading-relaxed mb-6">
+                            A comprehensive guide comparing the top no-code platforms and helping you choose the right one for your projects.
+                        </p>
+                        <button class="text-gray-400 cursor-not-allowed px-4 py-2 rounded-lg font-semibold opacity-50">
+                            Coming Soon
+                        </button>
+                    </div>
+
+                    <div class="blog-card p-6 md:p-8">
+                        <div class="h-48 bg-gradient-to-br from-purple-100 to-indigo-100 rounded-lg mb-6 flex items-center justify-center">
+                            <span class="text-gray-400 text-4xl">💼</span>
+                        </div>
+                        <div class="mb-4">
+                            <span class="text-sm text-gray-500">Coming Soon</span>
+                        </div>
+                        <h4 class="text-xl font-bold text-gray-900 mb-3">
+                            Building Your First Application
+                        </h4>
+                        <p class="text-gray-600 leading-relaxed mb-6">
+                            Step-by-step tutorial on creating your first no-code application from concept to deployment.
+                        </p>
+                        <button class="text-gray-400 cursor-not-allowed px-4 py-2 rounded-lg font-semibold opacity-50">
+                            Coming Soon
+                        </button>
+                    </div>
+
+                    <div class="blog-card p-6 md:p-8">
+                        <div class="h-48 bg-gradient-to-br from-purple-100 to-indigo-100 rounded-lg mb-6 flex items-center justify-center">
+                            <span class="text-gray-400 text-4xl">🚀</span>
+                        </div>
+                        <div class="mb-4">
+                            <span class="text-sm text-gray-500">Coming Soon</span>
+                        </div>
+                        <h4 class="text-xl font-bold text-gray-900 mb-3">
+                            Career Path in No-Code Development
+                        </h4>
+                        <p class="text-gray-600 leading-relaxed mb-6">
+                            Explore different career opportunities and salary expectations in the rapidly growing no-code industry.
+                        </p>
+                        <button class="text-gray-400 cursor-not-allowed px-4 py-2 rounded-lg font-semibold opacity-50">
+                            Coming Soon
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Subscribe Section -->
+            <div class="mt-20 bg-gray-50 rounded-2xl p-8 md:p-12 text-center">
+                <h3 class="text-2xl sm:text-3xl font-bold text-gray-900 mb-4">
+                    Never Miss an Update
+                </h3>
+                <p class="text-lg text-gray-600 mb-8 max-w-2xl mx-auto">
+                    Subscribe to our blog to receive the latest articles, tips, and insights about no-code development delivered to your inbox.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-3 max-w-md mx-auto">
+                    <input type="email" placeholder="Enter your email" class="flex-1 px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent" />
+                    <button class="btn-primary text-white px-6 py-3 rounded-lg font-semibold hover:shadow-lg transition duration-300">
+                        Subscribe
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-gradient py-16 md:py-24 lg:py-32 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
+        <div class="absolute inset-0 opacity-10">
+            <svg class="w-full h-full" viewBox="0 0 1200 600" preserveAspectRatio="xMidYMid slice">
+                <defs>
+                    <pattern id="dots" x="0" y="0" width="40" height="40" patternUnits="userSpaceOnUse">
+                        <circle cx="20" cy="20" r="2" fill="white"></circle>
+                    </pattern>
+                </defs>
+                <rect width="1200" height="600" fill="url(#dots)"></rect>
+            </svg>
+        </div>
+        
+        <div class="max-w-4xl mx-auto text-center relative z-10">
+            <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-6 leading-tight">
+                Ready to Start Your No-Code Journey?
+            </h2>
+            <p class="text-lg sm:text-xl text-white text-opacity-90 mb-12 leading-relaxed">
+                Join thousands of professionals who are transforming their careers with no-code development. Learn from experts, build real projects, and unlock employment opportunities.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="https://lov.com" class="bg-white text-purple-600 px-8 py-4 rounded-lg font-bold text-lg hover:bg-gray-100 transition duration-300 transform hover:scale-105 inline-block shadow-lg">
+                    Start Your Free Trial
+                </a>
+                <a href="https://test-acc-12349.github.io/lovable-no-code-training-2025-10-22-j1p02" class="border-2 border-white text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-white hover:text-purple-600 transition duration-300 transform hover:scale-105 inline-block">
+                    Back to Training
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-300 py-16 md:py-20 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+                <!-- Company Info -->
+                <div>
+                    <h3 class="text-white text-xl font-bold mb-6">Lovable</h3>
+                    <p class="text-gray-400 leading-relaxed mb-4">
+                        Empowering non-technical professionals to build powerful applications through no-code training and expert guidance.
+                    </p>
+                    <div class="flex gap-4">
+                        <a href="#" class="text-gray-400 hover:text-white transition duration-300" aria-label="Facebook">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"></path></svg>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition duration-300" aria-label="Twitter">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2s9 5 20 5a9.5 9.5 0 00-9-5.5c4.75 2.25 7-7 7-7s1.1 5.2-5.2 8.3A10.9 10.9 0 0123 3z"></path></svg>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition duration-300" aria-label="LinkedIn">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.225 0z"></path></svg>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Quick Links -->
+                <div>
+                    <h4 class="text-white text-lg font-semibold mb-6">Quick Links</h4>
+                    <ul class="space-y-3">
+                        <li><a href="https://test-acc-12349.github.io/lovable-no-code-training-2025-10-22-j1p02#features" class="text-gray-400 hover:text-white transition duration-300">Features</a></li>
+                        <li><a href="https://test-acc-12349.github.io/lovable-no-code-training-2025-10-22-j1p02#benefits" class="text-gray-400 hover:text-white transition duration-300">Benefits</a></li>
+                        <li><a href="https://test-acc-12349.github.io/lovable-no-code-training-2025-10-22-j1p02#faq" class="text-gray-400 hover:text-white transition duration-300">FAQ</a></li>
+                        <li><a href="https://lov.com" class="text-gray-400 hover:text-white transition duration-300">Courses</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Resources -->
+                <div>
+                    <h4 class="text-white text-lg font-semibold mb-6">Resources</h4>
+                    <ul class="space-y-3">
+                        <li><a href="https://test-acc-12349.github.io/lovable-no-code-training-2025-10-22-j1p02/blog.html" class="text-gray-400 hover:text-white transition duration-300">Blog</a></li>
+                        <li><a href="privacy.html" class="text-gray-400 hover:text-white transition duration-300">Privacy Policy</a></li>
+                        <li><a href="terms.html" class="text-gray-400 hover:text-white transition duration-300">Terms of Service</a></li>
+                        <li><a href="mailto:admin@lov.com" class="text-gray-400 hover:text-white transition duration-300">Contact Support</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Contact -->
+                <div>
+                    <h4 class="text-white text-lg font-semibold mb-6">Get In Touch</h4>
+                    <div class="space-y-4">
+                        <div>
+                            <p class="text-gray-400 text-sm mb-2">Email</p>
+                            <a href="mailto:admin@lov.com" class="text-white hover:text-gray-300 transition duration-300">admin@lov.com</a>
+                        </div>
+                        <div>
+                            <p class="text-gray-400 text-sm mb-2">Visit Our Website</p>
+                            <a href="https://lov.com" class="text-white hover:text-gray-300 transition duration-300">lov.com</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Footer Bottom -->
+            <div class="border-t border-gray-800 pt-8">
+                <div class="flex flex-col md:flex-row justify-between items-center gap-4">
+                    <p class="text-gray-400 text-sm">
+                        &copy; <span id="year">2024</span> Lovable. All rights reserved.
+                    </p>
+                    <div class="flex gap-6">
+                        <a href="privacy.html" class="text-gray-400 hover:text-white transition duration-300 text-sm">Privacy Policy</a>
+                        <a href="terms.html" class="text-gray-400 hover:text-white transition duration-300 text-sm">Terms of Service</a>
+                        <a href="https://test-acc-12349.github.io/lovable-no-code-training-2025-10-22-j1p02/blog.html" class="text-gray-400 hover:text-white transition duration-300 text-sm">Blog</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('active');
+        });
+        
+        // Close mobile menu when a link is clicked
+        const mobileMenuLinks = mobileMenu.querySelectorAll('a');
+        mobileMenuLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.remove('active');
+            });
+        });
+        
+        // Set current year in footer
+        document.getElementById('year').textContent = new Date().getFullYear();
+        
+        // Smooth scroll behavior
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
